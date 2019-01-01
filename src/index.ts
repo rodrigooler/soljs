@@ -2,20 +2,51 @@ import * as fs from "fs";
 import * as acorn from "acorn";
 
 const readFile = (path: string) => fs.readFileSync(path, "utf8");
+
 const createFile = (data: string) =>
   fs.writeFile(__dirname + "/user.sol", data, err => console.error(err));
+
+const createFileAST = (ast: any) =>
+  fs.writeFile(
+    __dirname + "/user.ast.json",
+    JSON.stringify(ast, null, 2),
+    err => console.error(err)
+  );
+
 const getContractName = (ast: any): string => {
   const name = ast.body[0].declarations[0].id.name;
   return name.charAt(0).toUpperCase() + name.slice(1);
 };
 
-const createCodeSolidity = (ast) => {
-    const pragma = "pragma solidity ^0.5.0;\n";
-    const contractName = `contract ${getContractName(ast)} {\n`;
-    const endLine = "}\n";
+const getTypeSolidity = value => {
+  if (typeof value === "string") return "string";
+  if (typeof value === "number") return "uint";
+};
 
-    return pragma + contractName + endLine;
-}
+const getVariables = (ast: any) =>
+  ast.body[0].declarations[0].init.properties
+    .map(p => {
+      const key = p.key.name;
+      const value = p.value.value;
+      const type = getTypeSolidity(value);
+
+      return value ? `${type} ${key} = ${value};\n` : `${type} ${key};\n`;
+    })
+    .join("");
+
+const createCodeSolidity = ast => {
+  const startLine = "pragma solidity ^0.5.0;";
+  const contractName = `contract ${getContractName(ast)} {\n`;
+  const variables = getVariables(ast);
+  const endLine = "}\n";
+
+  return `
+    ${startLine}
+    ${contractName}
+    ${variables}
+    ${endLine}
+  `;
+};
 
 const transformJSToSoldity = () => {
   const js = readFile(__dirname + "/example/user.js");
@@ -23,6 +54,7 @@ const transformJSToSoldity = () => {
   const solidity = createCodeSolidity(ast);
 
   createFile(solidity);
+  createFileAST(ast);
 };
 
 transformJSToSoldity();
