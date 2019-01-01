@@ -1,0 +1,12 @@
+{
+  "name": "solidity",
+  "version": "0.1.0",
+  "description": "test",
+  "main": "index.ts",
+  "repository": "git@github.com:rodrigooler/solidity.git",
+  "author": "Rodrigo Oler <roodrigoprogrammer@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^7.0.1"
+  }
+}
