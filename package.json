@@ -8,9 +8,14 @@
   },
   "devDependencies": {
     "@types/acorn": "^4.0.4",
-    "@types/node": "^10.12.18"
+    "@types/node": "^10.12.18",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
   },
   "license": "MIT",
-  "main": "index.ts",
-  "repository": "git@github.com:rodrigooler/solidity.git"
+  "main": "src/index.ts",
+  "repository": "git@github.com:rodrigooler/solidity.git",
+  "scripts": {
+    "test": "ts-node src/index.ts"
+  }
 }
