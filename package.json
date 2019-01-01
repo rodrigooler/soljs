@@ -1,12 +1,16 @@
 {
   "name": "solidity",
-  "version": "0.1.0",
   "description": "test",
-  "main": "index.ts",
-  "repository": "git@github.com:rodrigooler/solidity.git",
+  "version": "0.1.0",
   "author": "Rodrigo Oler <roodrigoprogrammer@gmail.com>",
-  "license": "MIT",
+  "dependencies": {
+    "acorn": "^6.0.4"
+  },
   "devDependencies": {
-    "ts-node": "^7.0.1"
-  }
+    "@types/acorn": "^4.0.4",
+    "@types/node": "^10.12.18"
+  },
+  "license": "MIT",
+  "main": "index.ts",
+  "repository": "git@github.com:rodrigooler/solidity.git"
 }
