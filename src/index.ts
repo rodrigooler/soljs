@@ -33,7 +33,7 @@ const createCodeSolidity = ast => {
   const contractName = `contract ${getContractName(ast)} {\n`;
   const variables = getVariables(ast);
   const funcs = getFunctions(ast);
-  const endLine = "}\n";
+  const endLine = "\n}\n";
 
   // @TODO: FIX THIS
   return startLine + contractName + variables + funcs + endLine;
