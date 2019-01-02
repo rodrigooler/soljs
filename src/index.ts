@@ -2,15 +2,18 @@ import * as fs from "fs";
 import * as acorn from "acorn";
 
 const solidityFolder = "../example/solidity";
+const abstractSyntaxTree = "../example/ast";
 
 const readFile = (path: string) => fs.readFileSync(path, "utf8");
 
 const createFile = (data: string) =>
-  fs.writeFile(__dirname + "/vote.sol", data, err => console.error(err));
+  fs.writeFile(__dirname + "/../examples/solidity/user.sol", data, err =>
+    console.error(err)
+  );
 
 const createFileAST = (ast: any) =>
   fs.writeFile(
-    __dirname + "/vote.ast.json",
+    __dirname + "/../examples/ast/user.ast.json",
     JSON.stringify(ast, null, 2),
     err => console.error(err)
   );
@@ -56,12 +59,15 @@ const createCodeSolidity = ast => {
 };
 
 const transformJSToSoldity = () => {
-  const js = readFile(__dirname + "/example/vote.js");
+  const js = readFile(__dirname + "/../examples/js/user.js");
   const ast: any = acorn.parse(js);
   const solidity = createCodeSolidity(ast);
 
   if (!fs.existsSync(solidityFolder)) {
     fs.mkdirSync(solidityFolder);
+    if (!fs.existsSync(abstractSyntaxTree)) {
+      fs.mkdirSync(abstractSyntaxTree);
+    }
   }
 
   createFile(solidity);
