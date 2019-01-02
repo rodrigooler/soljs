@@ -1,8 +1,11 @@
 {
-  "name": "solidity",
-  "description": "test",
+  "name": "@clubinvestbr/solidityjs",
+  "description": "Parser to convert Javascript code to Solidity using abstract syntax tree",
   "version": "0.1.0",
   "author": "Rodrigo Oler <roodrigoprogrammer@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/rodrigooler/solidity/issues"
+  },
   "dependencies": {
     "acorn": "^6.0.4"
   },
@@ -12,9 +15,25 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
   },
+  "directories": {
+    "example": "examples"
+  },
+  "homepage": "https://github.com/rodrigooler/solidity#readme",
+  "keywords": [
+    "blockchain",
+    "es6",
+    "javascript",
+    "parser",
+    "smart-contracts",
+    "solidity"
+  ],
   "license": "MIT",
   "main": "src/index.ts",
-  "repository": "git@github.com:rodrigooler/solidity.git",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rodrigooler/solidity.git"
+  },
   "scripts": {
     "test": "ts-node src/index.ts"
   }
