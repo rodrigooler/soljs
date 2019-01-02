@@ -37,24 +37,23 @@ const getVariables = (ast: any) =>
 
       return value ? `${type} ${key} = ${value};\n` : `${type} ${key};\n`;
     })
-    .join("");
+    .join("    ");
 
 const getFunctions = (ast: any) =>
-  ast.body[0].declarations[0].init.properties.map(p => {}).join("");
+  ast.body[0].declarations[0].init.properties.map(p => {}).join(" ");
 
 const createCodeSolidity = ast => {
-  const startLine = "pragma solidity ^0.5.0;";
-  const contractName = `contract ${getContractName(ast)} {\n`;
+  const startLine = "pragma solidity ^0.5.0;\n";
+  const contractName = `contract ${getContractName(ast)} {`;
   const variables = getVariables(ast);
   const funcs = getFunctions(ast);
   const endLine = "}\n";
 
-  return `
-    ${startLine}
-    ${contractName}
+  return `${startLine}
+${contractName}
     ${variables}
-    ${funcs}
-    ${endLine}
+  ${funcs}
+${endLine}
   `;
 };
 

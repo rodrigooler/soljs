@@ -1,11 +1,10 @@
+pragma solidity ^0.5.0;
 
-    pragma solidity ^0.5.0;
-    contract User {
-
+contract User {
     string name;
-string email;
+    string email;
 
-    
-    }
+   
+}
 
   
