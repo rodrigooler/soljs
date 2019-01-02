@@ -1,14 +1,16 @@
 import * as fs from "fs";
 import * as acorn from "acorn";
 
+const solidityFolder = "../example/solidity";
+
 const readFile = (path: string) => fs.readFileSync(path, "utf8");
 
 const createFile = (data: string) =>
-  fs.writeFile(__dirname + "/user.sol", data, err => console.error(err));
+  fs.writeFile(__dirname + "/vote.sol", data, err => console.error(err));
 
 const createFileAST = (ast: any) =>
   fs.writeFile(
-    __dirname + "/user.ast.json",
+    __dirname + "/vote.ast.json",
     JSON.stringify(ast, null, 2),
     err => console.error(err)
   );
@@ -34,24 +36,33 @@ const getVariables = (ast: any) =>
     })
     .join("");
 
+const getFunctions = (ast: any) =>
+  ast.body[0].declarations[0].init.properties.map(p => {}).join("");
+
 const createCodeSolidity = ast => {
   const startLine = "pragma solidity ^0.5.0;";
   const contractName = `contract ${getContractName(ast)} {\n`;
   const variables = getVariables(ast);
+  const funcs = getFunctions(ast);
   const endLine = "}\n";
 
   return `
     ${startLine}
     ${contractName}
     ${variables}
+    ${funcs}
     ${endLine}
   `;
 };
 
 const transformJSToSoldity = () => {
-  const js = readFile(__dirname + "/example/user.js");
+  const js = readFile(__dirname + "/example/vote.js");
   const ast: any = acorn.parse(js);
   const solidity = createCodeSolidity(ast);
+
+  if (!fs.existsSync(solidityFolder)) {
+    fs.mkdirSync(solidityFolder);
+  }
 
   createFile(solidity);
   createFileAST(ast);
