@@ -1,45 +1,45 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 100,
+  "end": 230,
   "body": [
     {
       "type": "VariableDeclaration",
-      "start": 0,
-      "end": 39,
+      "start": 28,
+      "end": 67,
       "declarations": [
         {
           "type": "VariableDeclarator",
-          "start": 4,
-          "end": 38,
+          "start": 32,
+          "end": 66,
           "id": {
             "type": "Identifier",
-            "start": 4,
-            "end": 8,
+            "start": 32,
+            "end": 36,
             "name": "user"
           },
           "init": {
             "type": "ObjectExpression",
-            "start": 11,
-            "end": 38,
+            "start": 39,
+            "end": 66,
             "properties": [
               {
                 "type": "Property",
-                "start": 15,
-                "end": 23,
+                "start": 43,
+                "end": 51,
                 "method": false,
                 "shorthand": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 15,
-                  "end": 19,
+                  "start": 43,
+                  "end": 47,
                   "name": "name"
                 },
                 "value": {
                   "type": "Literal",
-                  "start": 21,
-                  "end": 23,
+                  "start": 49,
+                  "end": 51,
                   "value": "",
                   "raw": "\"\""
                 },
@@ -47,21 +47,21 @@
               },
               {
                 "type": "Property",
-                "start": 27,
-                "end": 36,
+                "start": 55,
+                "end": 64,
                 "method": false,
                 "shorthand": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 27,
-                  "end": 32,
+                  "start": 55,
+                  "end": 60,
                   "name": "email"
                 },
                 "value": {
                   "type": "Literal",
-                  "start": 34,
-                  "end": 36,
+                  "start": 62,
+                  "end": 64,
                   "value": "",
                   "raw": "\"\""
                 },
@@ -75,23 +75,23 @@
     },
     {
       "type": "VariableDeclaration",
-      "start": 41,
-      "end": 75,
+      "start": 89,
+      "end": 123,
       "declarations": [
         {
           "type": "VariableDeclarator",
-          "start": 47,
-          "end": 74,
+          "start": 95,
+          "end": 122,
           "id": {
             "type": "Identifier",
-            "start": 47,
-            "end": 50,
+            "start": 95,
+            "end": 98,
             "name": "set"
           },
           "init": {
             "type": "ArrowFunctionExpression",
-            "start": 53,
-            "end": 74,
+            "start": 101,
+            "end": 122,
             "id": null,
             "expression": true,
             "generator": false,
@@ -99,26 +99,26 @@
             "params": [
               {
                 "type": "Identifier",
-                "start": 53,
-                "end": 57,
+                "start": 101,
+                "end": 105,
                 "name": "user"
               }
             ],
             "body": {
               "type": "AssignmentExpression",
-              "start": 62,
-              "end": 73,
+              "start": 110,
+              "end": 121,
               "operator": "=",
               "left": {
                 "type": "Identifier",
-                "start": 62,
-                "end": 66,
+                "start": 110,
+                "end": 114,
                 "name": "user"
               },
               "right": {
                 "type": "Identifier",
-                "start": 69,
-                "end": 73,
+                "start": 117,
+                "end": 121,
                 "name": "user"
               }
             }
@@ -129,23 +129,23 @@
     },
     {
       "type": "VariableDeclaration",
-      "start": 76,
-      "end": 99,
+      "start": 124,
+      "end": 147,
       "declarations": [
         {
           "type": "VariableDeclarator",
-          "start": 82,
-          "end": 98,
+          "start": 130,
+          "end": 146,
           "id": {
             "type": "Identifier",
-            "start": 82,
-            "end": 85,
+            "start": 130,
+            "end": 133,
             "name": "get"
           },
           "init": {
             "type": "ArrowFunctionExpression",
-            "start": 88,
-            "end": 98,
+            "start": 136,
+            "end": 146,
             "id": null,
             "expression": true,
             "generator": false,
@@ -153,8 +153,97 @@
             "params": [],
             "body": {
               "type": "Identifier",
-              "start": 94,
-              "end": 98,
+              "start": 142,
+              "end": 146,
+              "name": "user"
+            }
+          }
+        }
+      ],
+      "kind": "const"
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 170,
+      "end": 205,
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 176,
+          "end": 204,
+          "id": {
+            "type": "Identifier",
+            "start": 176,
+            "end": 180,
+            "name": "_set"
+          },
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "start": 183,
+            "end": 204,
+            "id": null,
+            "expression": true,
+            "generator": false,
+            "async": false,
+            "params": [
+              {
+                "type": "Identifier",
+                "start": 183,
+                "end": 187,
+                "name": "user"
+              }
+            ],
+            "body": {
+              "type": "AssignmentExpression",
+              "start": 192,
+              "end": 203,
+              "operator": "=",
+              "left": {
+                "type": "Identifier",
+                "start": 192,
+                "end": 196,
+                "name": "user"
+              },
+              "right": {
+                "type": "Identifier",
+                "start": 199,
+                "end": 203,
+                "name": "user"
+              }
+            }
+          }
+        }
+      ],
+      "kind": "const"
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 206,
+      "end": 230,
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 212,
+          "end": 229,
+          "id": {
+            "type": "Identifier",
+            "start": 212,
+            "end": 216,
+            "name": "_get"
+          },
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "start": 219,
+            "end": 229,
+            "id": null,
+            "expression": true,
+            "generator": false,
+            "async": false,
+            "params": [],
+            "body": {
+              "type": "Identifier",
+              "start": 225,
+              "end": 229,
               "name": "user"
             }
           }
