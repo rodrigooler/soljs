@@ -23,6 +23,11 @@
     "example": "examples"
   },
   "homepage": "https://github.com/rodrigooler/solidity#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "blockchain",
     "es6",
@@ -32,7 +37,22 @@
     "solidity"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "yarn tslint",
+      "git add"
+    ]
+  },
   "main": "src/index.ts",
+  "prettier": {
+    "parser": "typescript",
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
   "private": false,
   "repository": {
     "type": "git",
