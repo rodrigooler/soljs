@@ -49,6 +49,7 @@ const createCodeSolidity = ast => {
   const funcs = getFunctions(ast);
   const endLine = "}\n";
 
+  // @TODO: FIX THIS
   return `${startLine}
 ${contractName}
     ${variables}
