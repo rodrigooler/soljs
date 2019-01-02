@@ -1,8 +1,8 @@
 import * as fs from "fs";
 import * as acorn from "acorn";
 
-const solidityFolder = "../example/solidity";
-const abstractSyntaxTree = "../example/ast";
+const solidityFolder = __dirname + "/../examples/solidity";
+const abstractSyntaxTree = __dirname + "/../examples/ast";
 
 const readFile = (path: string) => fs.readFileSync(path, "utf8");
 
