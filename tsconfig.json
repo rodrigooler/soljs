@@ -3,8 +3,9 @@
       "lib": [
           "esnext"
       ],
-      "target": "esnext",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
       "outDir": "dist",
-      "moduleResolution": "node"
+      "target": "esnext",
   },
-}
+} 
