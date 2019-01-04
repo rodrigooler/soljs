@@ -81,7 +81,8 @@
     "url": "git+ssh://git@github.com/rodrigooler/solidity.git"
   },
   "scripts": {
-    "test": "ts-node src/index.ts",
+    "run": "ts-node src/index.ts",
+    "test": "jest",
     "tslint": "tslint -p .",
     "tslint:fix": "tslint --fix -c ./tslint.json 'src/**/*{.ts,.tsx}'"
   }
