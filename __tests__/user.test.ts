@@ -11,4 +11,8 @@ describe('Test solidity file', () => {
   test('should verify that you have a contract name', () => {
     expect(lines[2]).toBe('contract User {')
   })
+  test('should check whether the variables with types', () => {
+    expect(lines[3]).toBe('    string name;')
+    expect(lines[4]).toBe('    string email;')
+  })
 })
