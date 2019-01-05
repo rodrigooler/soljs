@@ -9,5 +9,5 @@ const set = _user => (user = _user)
 // const get = () => user;
 
 // // private functions
-// const _set = user => (user = user);
+// const _set = _user => (user = _user);
 // const _get = () => user;
