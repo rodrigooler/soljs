@@ -1,11 +1,11 @@
 // contract with properties
 let user = {
-  name: "",
-  email: ""
-};
+  name: '',
+  email: '',
+}
 
 // public functions
-const set = user => (user = user);
+const set = _user => (user = _user)
 // const get = () => user;
 
 // // private functions
