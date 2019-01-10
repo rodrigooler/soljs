@@ -8,6 +8,6 @@ let user = {
 const set = _user => (user = _user)
 // const get = () => user;
 
-// // private functions
-// const _set = _user => (user = _user);
+// private functions
+const _set = _user => (user = _user)
 // const _get = () => user;

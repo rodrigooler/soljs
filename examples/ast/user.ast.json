@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 230,
+  "end": 239,
   "body": [
     {
       "type": "VariableDeclaration",
@@ -11,7 +11,7 @@
         {
           "type": "VariableDeclarator",
           "start": 32,
-          "end": 66,
+          "end": 67,
           "id": {
             "type": "Identifier",
             "start": 32,
@@ -21,7 +21,7 @@
           "init": {
             "type": "ObjectExpression",
             "start": 39,
-            "end": 66,
+            "end": 67,
             "properties": [
               {
                 "type": "Property",
@@ -41,7 +41,7 @@
                   "start": 49,
                   "end": 51,
                   "value": "",
-                  "raw": "\"\""
+                  "raw": "''"
                 },
                 "kind": "init"
               },
@@ -63,7 +63,7 @@
                   "start": 62,
                   "end": 64,
                   "value": "",
-                  "raw": "\"\""
+                  "raw": "''"
                 },
                 "kind": "init"
               }
@@ -76,12 +76,12 @@
     {
       "type": "VariableDeclaration",
       "start": 89,
-      "end": 123,
+      "end": 124,
       "declarations": [
         {
           "type": "VariableDeclarator",
           "start": 95,
-          "end": 122,
+          "end": 124,
           "id": {
             "type": "Identifier",
             "start": 95,
@@ -91,7 +91,7 @@
           "init": {
             "type": "ArrowFunctionExpression",
             "start": 101,
-            "end": 122,
+            "end": 124,
             "id": null,
             "expression": true,
             "generator": false,
@@ -100,26 +100,26 @@
               {
                 "type": "Identifier",
                 "start": 101,
-                "end": 105,
-                "name": "user"
+                "end": 106,
+                "name": "_user"
               }
             ],
             "body": {
               "type": "AssignmentExpression",
-              "start": 110,
-              "end": 121,
+              "start": 111,
+              "end": 123,
               "operator": "=",
               "left": {
                 "type": "Identifier",
-                "start": 110,
-                "end": 114,
+                "start": 111,
+                "end": 115,
                 "name": "user"
               },
               "right": {
                 "type": "Identifier",
-                "start": 117,
-                "end": 121,
-                "name": "user"
+                "start": 118,
+                "end": 123,
+                "name": "_user"
               }
             }
           }
@@ -129,58 +129,23 @@
     },
     {
       "type": "VariableDeclaration",
-      "start": 124,
-      "end": 147,
+      "start": 174,
+      "end": 211,
       "declarations": [
         {
           "type": "VariableDeclarator",
-          "start": 130,
-          "end": 146,
+          "start": 180,
+          "end": 210,
           "id": {
             "type": "Identifier",
-            "start": 130,
-            "end": 133,
-            "name": "get"
-          },
-          "init": {
-            "type": "ArrowFunctionExpression",
-            "start": 136,
-            "end": 146,
-            "id": null,
-            "expression": true,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "Identifier",
-              "start": 142,
-              "end": 146,
-              "name": "user"
-            }
-          }
-        }
-      ],
-      "kind": "const"
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 170,
-      "end": 205,
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 176,
-          "end": 204,
-          "id": {
-            "type": "Identifier",
-            "start": 176,
-            "end": 180,
+            "start": 180,
+            "end": 184,
             "name": "_set"
           },
           "init": {
             "type": "ArrowFunctionExpression",
-            "start": 183,
-            "end": 204,
+            "start": 187,
+            "end": 210,
             "id": null,
             "expression": true,
             "generator": false,
@@ -188,63 +153,28 @@
             "params": [
               {
                 "type": "Identifier",
-                "start": 183,
-                "end": 187,
-                "name": "user"
+                "start": 187,
+                "end": 192,
+                "name": "_user"
               }
             ],
             "body": {
               "type": "AssignmentExpression",
-              "start": 192,
-              "end": 203,
+              "start": 197,
+              "end": 209,
               "operator": "=",
               "left": {
                 "type": "Identifier",
-                "start": 192,
-                "end": 196,
+                "start": 197,
+                "end": 201,
                 "name": "user"
               },
               "right": {
                 "type": "Identifier",
-                "start": 199,
-                "end": 203,
-                "name": "user"
+                "start": 204,
+                "end": 209,
+                "name": "_user"
               }
-            }
-          }
-        }
-      ],
-      "kind": "const"
-    },
-    {
-      "type": "VariableDeclaration",
-      "start": 206,
-      "end": 230,
-      "declarations": [
-        {
-          "type": "VariableDeclarator",
-          "start": 212,
-          "end": 229,
-          "id": {
-            "type": "Identifier",
-            "start": 212,
-            "end": 216,
-            "name": "_get"
-          },
-          "init": {
-            "type": "ArrowFunctionExpression",
-            "start": 219,
-            "end": 229,
-            "id": null,
-            "expression": true,
-            "generator": false,
-            "async": false,
-            "params": [],
-            "body": {
-              "type": "Identifier",
-              "start": 225,
-              "end": 229,
-              "name": "user"
             }
           }
         }
